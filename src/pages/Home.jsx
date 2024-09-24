@@ -11,14 +11,15 @@ export const Home = () => {
             <h1 className="font-medium mt-10 mx-5 text-customGreen text-4xl my-10">
               WELCOME, <span className="mx-2">мой друг</span>
             </h1>
-            <p className="mx-5 my-5 text-gray-600 font-cinzel">
+            <p className="mx-5 my-2 text-gray-600 font-cinzel">
               Immerse yourself in the universe of Fyodor Dostoyevsky in a
-              completely new way. Discover his literary work in digital format,
+              completely new way.
+            </p>
+            <p className="my-2 mx-5 text-gray-600 font-cinzel ">Discover his literary work in digital format,
               with an exclusive selection of his classics in EPUB. At Dosto's
               Club, we want to bring Dostoyevsky's concepts and legacy into a
               modern era, offering you a unique experience to explore his
-              timeless writings.
-            </p>
+              timeless writings.</p>
           </div>
 
           <a

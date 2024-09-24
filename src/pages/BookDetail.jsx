@@ -1,7 +1,6 @@
 import { useParams, Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { useAuth } from "../auth/AuthContext";
-import AvatarCircles from "../components/magicui/AvatarCircles.tsx";
 import Rating from "@mui/material/Rating";
 import { HeartIcon } from "../components/HeartIcon";
 import CustomBreadcrumbs from "../components/CustomBreadcrumbs";
@@ -32,10 +31,6 @@ const BookDetail = () => {
   const [isFavorite, setIsFavorite] = useState(false);
   const [visibleReviewsCount, setVisibleReviewsCount] = useState(5);
 
-  const avatarUrls = [
-    "https://avatars.githubusercontent.com/u/16860528",
-    "https://avatars.githubusercontent.com/u/20110627",
-  ];
 
   useEffect(() => {
     // Obtener detalles del libro
@@ -197,7 +192,7 @@ const BookDetail = () => {
             </div>
 
             <div>
-              <div className="flex flex-col lg:flex-row gap-2 mx-2 my-5">
+              <div className="flex flex-col lg:flex-row justify-between mx-2 my-5">
                 {/* columna 1 */}
                 <div className="flex-grow lg:w-auto lg:mr-2">
                   {user ? (
@@ -209,24 +204,10 @@ const BookDetail = () => {
                   ) : (
                     <button className="w-full lg:w-[200px] h-[44px] border border-[#1F352C] rounded-md text-[#1F352C] bg-transparent hover:bg-[#1F352C] hover:text-white font-semibold transition-colors duration-300">
                       <Link to={"/login"} className="">
-                        LOG IN
+                        Read
                       </Link>
                     </button>
                   )}
-                </div>
-                {/* columna 2 */}
-                <div className="flex-grow lg:w-auto lg:ml-3">
-                  <button className="w-full lg:w-[200px] h-[45px] border border-gray-50 bg-transparent rounded-lg text-[#1F352C] hover:bg-[#1F352C] hover:text-white font-medium transition-colors duration-300 flex items-center justify-center">
-                    <Link to={"#"} className="flex items-center">
-                      <AvatarCircles
-                        size="sm"
-                        className="mx-2"
-                        numPeople={99}
-                        avatarUrls={avatarUrls}
-                      />
-                      <span className="mx-2">Community</span>
-                    </Link>
-                  </button>
                 </div>
               </div>
             </div>
@@ -241,7 +222,7 @@ const BookDetail = () => {
             </p>
             <div className="flex flex-col items-start justify-start">
               <Rating name="read-only" value={3} size="large" readOnly />
-              <small className="my-2 text-customGreen font-cinzel">
+              <small className="my-2 text-customGreen text-md font-cinzel">
                 Rate this book
               </small>
             </div>
