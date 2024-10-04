@@ -133,7 +133,7 @@ export const Nav = () => {
           <>
             <NavbarContent justify="end" className="ms-11">
               <NavbarItem className="hidden lg:flex ms-11">
-              <Link href="/books" className="mx-5 text-customGreen">
+                <Link href="/books" className="mx-5 text-customGreen">
                   EXPLORE
                 </Link>
                 <Link href="/login" className="mx-5 text-customGreen">
@@ -151,18 +151,18 @@ export const Nav = () => {
         <NavbarMenu>
           {user === null && (
             <NavbarItem>
-              <Button as={Link} color="primary" href="/login" variant="flat">
+              <Button as={Link} color="default" href="/login" variant="flat" className="p-3 text-customGreen" size="lg">
                 LOG IN
               </Button>
             </NavbarItem>
           )}
           <NavbarItem>
-            <Link href="/" className="text-customGreen my-3">
+            <Link href="/" className="text-customGreen my-3 mx-1">
               HOME
             </Link>
           </NavbarItem>
           <NavbarItem>
-            <Link href="/books" className="text-customGreen my-3">
+            <Link href="/books" className="text-customGreen my-3 mx-1">
               BOOKS
             </Link>
           </NavbarItem>
