@@ -98,12 +98,12 @@ const Profile = () => {
                   ? `https://api-dosto-club-2.onrender.com/${userProfile.image}`
                   : "/img/fp.png"
               }
-              className="w-32 h-32 text-large"
+              size="lg"
             />
             <h1 className="my-2 text-center font-cinzel text-customGreen text-lg font-medium">
               {userProfile.nombre || storedUser.email}
             </h1>
-            <p className="text-customGreen text-sm">
+            <p className="text-customGreen text-sm mx-2">
               {userProfile.biografia || "Biography not available."}
             </p>
           </div>

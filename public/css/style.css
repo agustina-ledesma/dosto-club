@@ -5,3 +5,24 @@
     font-weight: lighter;
                                                 
 }
+
+h1 {
+    color: #1F352C;
+}
+
+html {
+    height: 100%;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+footer {
+    margin-top: auto;
+    color: #1F352C;
+    text-align: center;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}

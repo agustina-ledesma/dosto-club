@@ -1,0 +1,31 @@
+[
+    {
+      "id": 1,
+      "name": "Dosto's Club T-Shirt",
+      "price": 25,
+      "image": "/merch/1.png",
+      "description": "A minimalist black t-shirt with 'Dosto's Club' printed in white. Perfect for literary enthusiasts."
+    },
+    {
+      "id": 2,
+      "name": "Dosto's Journal",
+      "price": 18,
+      "image": "/merch/3.png",
+      "description": "A vintage-style notebook for deep thoughts and existential reflections. Inspired by Dostoevsky's works."
+    },
+    {
+      "id": 3,
+      "name": "Dosto's Club Hoodie",
+      "price": 40,
+      "image": "/merch/2.png",
+      "description": "A cozy hoodie featuring the 'Dosto's Club' logo. For those who embrace philosophy and suffering."
+    },
+    {
+      "id": 4,
+      "name": "Dosto's Club Cap",
+      "price": 22,
+      "image": "/merch/4.png",
+      "description": "A classic black cap embroidered with 'Dosto's Club'. Stay stylish while pondering the meaning of life."
+    }
+  ]
+  

@@ -23,7 +23,7 @@ export const FavoriteTab = () => {
   useEffect(() => {
     const fetchFavoriteBooks = async () => {
       try {
-        console.log("Fetching favorite books..."); // Log
+        
         setLoading(true);
         const response = await fetch(
           `https://api-dosto-club-2.onrender.com/favorites-user/${user._id}`,
@@ -40,7 +40,7 @@ export const FavoriteTab = () => {
         }
 
         const data = await response.json();
-        console.log("Favorite books data:", data); // Log
+       
         setFavoriteBooks(data);
       } catch (error) {
         console.error("Error fetching favorite books:", error);
@@ -57,7 +57,7 @@ export const FavoriteTab = () => {
   useEffect(() => {
     const fetchBookDetails = async () => {
       try {
-        console.log("Fetching book details..."); // Log
+     
         const details = {};
         for (const book of favoriteBooks) {
           const response = await fetch(
@@ -65,7 +65,7 @@ export const FavoriteTab = () => {
           );
           if (response.ok) {
             const bookData = await response.json();
-            console.log(`Book details for ${book.bookId}:`, bookData); // Log
+            //console.log(`Book details for ${book.bookId}:`, bookData); // Log
             details[book.bookId] = bookData;
           } else {
             console.error(`Error fetching details for book ${book.bookId}`);

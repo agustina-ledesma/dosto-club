@@ -15,11 +15,12 @@ export const Home = () => {
               Immerse yourself in the universe of Fyodor Dostoyevsky in a
               completely new way.
             </p>
-            <p className="my-2 mx-5 text-gray-600 font-cinzel ">Discover his literary work in digital format,
-              with an exclusive selection of his classics in EPUB. At Dosto's
-              Club, we want to bring Dostoyevsky's concepts and legacy into a
-              modern era, offering you a unique experience to explore his
-              timeless writings.</p>
+            <p className="my-2 mx-5 text-gray-600 font-cinzel ">
+              Discover his literary work in digital format, with an exclusive
+              selection of his classics in EPUB. At Dosto's Club, we want to
+              bring Dostoyevsky's concepts and legacy into a modern era,
+              offering you a unique experience to explore his timeless writings.
+            </p>
           </div>
 
           <a
@@ -53,9 +54,9 @@ export const Home = () => {
             </a>
           </div>
           <div className="flex-grow bg-[#1F352C]">
-            <div className="mx-5">
+            <div className="">
               <img
-                src="/img/fyodor.png"
+                src="/img/dosto-full.png"
                 alt="Last photo of Fyodor Dostoevsky 6 months before his death."
                 className="max-w-full max-h-[620px]"
               />

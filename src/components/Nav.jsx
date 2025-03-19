@@ -83,6 +83,9 @@ export const Nav = () => {
                   <Link href="/books" className="mx-5 text-customGreen">
                     BOOKS
                   </Link>
+                  <Link href="/products" className="mx-5 text-customGreen">
+                    SHOP
+                  </Link>
                   <Link href="/about" className="mx-5 text-customGreen">
                     ABOUT
                   </Link>
@@ -119,6 +122,7 @@ export const Nav = () => {
                         Profile
                       </Link>
                     </NavbarItem>
+                 
                   </DropdownItem>
                   <DropdownItem key="logout" color="danger">
                     <Link href="#" onClick={logout} className="text-dark">
@@ -136,6 +140,9 @@ export const Nav = () => {
                 <Link href="/books" className="mx-5 text-customGreen">
                   EXPLORE
                 </Link>
+                <Link href="/products" className="mx-5 text-customGreen">
+                  SHOP
+                </Link>
                 <Link href="/login" className="mx-5 text-customGreen">
                   LOG IN
                 </Link>
@@ -151,7 +158,13 @@ export const Nav = () => {
         <NavbarMenu>
           {user === null && (
             <NavbarItem>
-              <Button as={Link} color="default" href="/login" variant="flat" className="p-3 text-customGreen" size="lg">
+              <Button
+                as={Link}
+                color="default"
+                href="/login"
+                className="p-3 bg-[#1F352C] text-white"
+                size="lg"
+              >
                 LOG IN
               </Button>
             </NavbarItem>
@@ -164,6 +177,11 @@ export const Nav = () => {
           <NavbarItem>
             <Link href="/books" className="text-customGreen my-3 mx-1">
               BOOKS
+            </Link>
+          </NavbarItem>
+          <NavbarItem>
+            <Link href="/products" className="my-3 mx-1 text-customGreen">
+              SHOP
             </Link>
           </NavbarItem>
           {isAdmin && (

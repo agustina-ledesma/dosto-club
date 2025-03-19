@@ -15,11 +15,14 @@ const EditProfile = () => {
   const fetchUserData = async () => {
     const token = getToken();
     try {
-      const response = await fetch(`https://api-dosto-club-2.onrender.com/user/${id}`, {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      });
+      const response = await fetch(
+        `https://api-dosto-club-2.onrender.com/user/${id}`,
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      );
 
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
@@ -29,7 +32,9 @@ const EditProfile = () => {
       setNombre(userData.nombre || "");
       setBiografia(userData.biografia || "");
       if (userData.image) {
-        setCurrentImage(`https://api-dosto-club-2.onrender.com/${userData.image}`);
+        setCurrentImage(
+          `https://api-dosto-club-2.onrender.com/${userData.image}`
+        );
       }
     } catch (error) {
       console.error("Error fetching user data:", error);
@@ -47,12 +52,15 @@ const EditProfile = () => {
   const handleRemoveImage = async () => {
     const token = getToken();
     try {
-      const response = await fetch(`https://api-dosto-club-2.onrender.com/update-profile-image/${id}`, {
-        method: "PUT",
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      });
+      const response = await fetch(
+        `https://api-dosto-club-2.onrender.com/update-profile-image/${id}`,
+        {
+          method: "PUT",
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      );
 
       if (response.ok) {
         setCurrentImage("");
@@ -100,10 +108,15 @@ const EditProfile = () => {
 
   return (
     <>
-      <div className="m-3 flex justify-center">
+      <div className="m-3  h-screen flex justify-center items-center">
         <div className="w-full max-w-2xl">
-          <h1 className="font-cinzel text-2xl m-4 text-customGreen font-medium">Edit Profile</h1>
-          <form className="p-4" onSubmit={handleSubmit}>
+          <form
+            className="p-8 border-1 border-[#1F352C] bg-neutral-50"
+            onSubmit={handleSubmit}
+          >
+            <h1 className="font-cinzel text-2xl m-4 text-customGreen font-medium">
+              Edit Profile
+            </h1>
             <div className="flex flex-col items-center">
               {currentImage && (
                 <div className="w-full my-3 text-center">
@@ -113,7 +126,11 @@ const EditProfile = () => {
                     className="w-32 h-32 object-cover rounded-full border-2 border-[#1F352C] mx-auto"
                   />
                   <div className="flex justify-center items-center mt-4">
-                    <Button size="sm" color="danger" onClick={handleRemoveImage}>
+                    <Button
+                      size="sm"
+                      color="danger"
+                      onClick={handleRemoveImage}
+                    >
                       Remove image
                     </Button>
                   </div>

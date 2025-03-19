@@ -26,6 +26,8 @@ import EditProfile from "../pages/Auth/EditProfile";
 import Dostoevsky from "../pages/Dostoevsky";
 import About from "../pages/About";
 import NotFound from "../pages/NotFound";
+import Products from "../pages/Products";
+import ProductId from "../pages/ProductId";
 
 export const Router = () => {
   return (
@@ -37,7 +39,7 @@ export const Router = () => {
             <Nav />
             
             <Outlet />
-            <Footer />
+
           </React.Fragment>
         }
       > 
@@ -50,6 +52,8 @@ export const Router = () => {
         <Route path="/register" element={<Register />} />
         <Route path="/dostoevsky" element={<Dostoevsky />} />
         <Route path="/about" element={<About />} />
+        <Route path="/products" element={<Products />} />
+        <Route path="/product/:id" element={<ProductId/>} />
         <Route path="*" element={<NotFound />} />
         <Route
           path="/profile"
