@@ -108,7 +108,7 @@ export const Nav = () => {
                   />
                 </DropdownTrigger>
                 <DropdownMenu aria-label="Profile Actions" variant="flat">
-                  <DropdownItem key="profile" className="h-14 gap-2">
+                  <DropdownItem key="profile" className="h-14 gap-2" textValue="profile">
                     <p className="font-semibold">
                       Hi,{" "}
                       <span className="text-customGreen font-cinzel">
@@ -116,7 +116,7 @@ export const Nav = () => {
                       </span>
                     </p>
                   </DropdownItem>
-                  <DropdownItem key="settings">
+                  <DropdownItem key="settings" textValue="profile">
                     <NavbarItem>
                       <Link href="/profile" className="text-dark">
                         Profile
@@ -124,7 +124,7 @@ export const Nav = () => {
                     </NavbarItem>
                  
                   </DropdownItem>
-                  <DropdownItem key="logout" color="danger">
+                  <DropdownItem key="logout" color="danger" textValue="logout">
                     <Link href="#" onClick={logout} className="text-dark">
                       Log out
                     </Link>

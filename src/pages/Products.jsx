@@ -31,7 +31,7 @@ const Products = () => {
       <div>
         {loading ? (
           <div className="flex justify-center my-10">
-            <Spinner size="lg" />
+            <Spinner size="lg" color="default" />
           </div>
         ) : (
           <div className="min-h-sccreen grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-0 ">

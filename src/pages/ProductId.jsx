@@ -26,7 +26,7 @@ const ProductId = () => {
   if (loading) {
     return (
       <div className="flex justify-center items-center h-screen">
-        <Spinner size="lg" />
+        <Spinner size="lg" color="default" />
       </div>
     );
   }
@@ -93,7 +93,7 @@ const ProductId = () => {
                 <Button
                   size="lg"
                   isDisabled
-                  className="w-full bg-transparent border-1 border-[#1F352C]"
+                  className="w-full bg-transparent border-1 text-customGreen border-[#1F352C]"
                 >
                   OUT OF STOCK
                 </Button>

@@ -262,7 +262,7 @@ const BookDetail = () => {
                         src={
                           image
                             ? `https://api-dosto-club-2.onrender.com/${image}`
-                            : "https://i.pravatar.cc/150?u=a042581f4e29026704d"
+                            : "/img/fp.png"
                         }
                       />
                       <span className="text-gray-600 text-center mt-4">
@@ -289,10 +289,11 @@ const BookDetail = () => {
                               {user ? (
                                 <Link
                                   to={`/report-review/${review._id}`}
-                                  className="text-danger-500 mx-3 my-1 flex items-center"
+                                  className="text-danger-500 mx-3 my-1 flex items-center gap-2"
                                 >
-                                  Report
                                   <i class="bx bx-flag ms-1"></i>
+                                  <span>Report review</span>
+                                  
                                 </Link>
                               ) : (
                                 <Tooltip content="Log in">
